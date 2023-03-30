@@ -22,10 +22,12 @@ html {
   font-family: "Inter", sans-serif;
   color: hsl(236, 13%, 42%);
   background-color: hsl(36, 100%, 99%);
+  overflow-x: hidden;
 }
 body {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 .container {
   margin-top: 8rem;
@@ -218,6 +220,8 @@ footer {
     background-color: hsl(36, 100%, 99%);
     top: 0;
     right: 0;
+    transform: translateX(100%);
+    transition: all 0.5s;
     flex-direction: column;
     justify-content: center;
     box-shadow: -100px 0 50px 50px rgba(0, 0, 0, 0.5);
@@ -233,6 +237,7 @@ footer {
   }
 
   .nav-open .main-nav {
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
